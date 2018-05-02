@@ -68,7 +68,7 @@ String prhase = "passe une bonne journée";
 
 ````
 
-####Les variables  *primitif*
+#### Les variables  *primitif*
 
 | Raccourcis | Type |
 |:-----------|:-----|
@@ -122,7 +122,7 @@ float c = 25.30;
 int d = (int)c; // Le résultat sera 25
 ```
 
-####Les variables  *objets*
+#### Les variables  *objets*
 
 | Raccourcis | Type |
 |:-----------|:-----|
