@@ -19,7 +19,7 @@ Deux Octets = 256 * 256 = 65536 possibilités.
 
 Quatre Octets = 256 exposant 4  = 4294967296 possibilités.
 
-Quatre Octets = 256 exposant 8 = 1.9631688e+19 possibilités.
+Huit Octets = 256 exposant 8 = 1.9631688e+19 possibilités.
 ...
 
 ### Les différents types de variables
