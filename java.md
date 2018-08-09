@@ -104,14 +104,13 @@ String prhase = "passe une bonne journée";
 On ne mets pas de virgule pour exprimer un chiffre décimal, on utilise un point. 
 En java on écrit les float de cette manière. 
 
-On rappelle toujours à Java qu'il s'agit d'un float à la fin avec le ``f``
-
 ````java
 float decimal = 0.637f;
 
 ````
+On rappelle toujours à Java qu'il s'agit d'un float à la fin avec le ``f``
 
-De même pour les doubles
+Et de même pour les doubles
 
 ````java
 double decimal = 0.63755555488787d;
@@ -138,11 +137,12 @@ int b = (int)a; // Le résultat sera 26
 float c = 25.30;
 int d = (int)c; // Le résultat sera 25
 ```
+On appelle cela "caster" une variable. 
 
-#### Les variables  *objets*
+#### Les variables *objets*
 
-À l'inverse des variables primitives, les variabales objects sont des class hérité de la class Object.
-ELles contienent un constructeur, des méthode et propriétés. 
+À l'inverse des variables primitives, les variabales objects sont des class héritées de la class Object.
+Elles contiennent un constructeur, des méthodes et propriétés. 
 
 | Raccourcis | Type |
 |:-----------|:-----|
