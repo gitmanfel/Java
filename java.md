@@ -1,6 +1,10 @@
 # Java
 
 
+## Les avantges de Java
+* Relativement plus simple que le c++
+* Moins de bugs à gerer que le c++ (Surchage des opérateurs...)
+* Temps de production réduit par rapport au c++ de 30%
 
 |Nom |Correspondance  | 
 |:---|:---------------| 
@@ -68,7 +72,7 @@ String prhase = "passe une bonne journée";
 
 ````
 
-#### Les variables  *primitif*
+#### Les variables  *primitives*
 
 | Raccourcis | Type |
 |:-----------|:-----|
@@ -124,6 +128,9 @@ int d = (int)c; // Le résultat sera 25
 
 #### Les variables  *objets*
 
+À l'inverse des variables primitives, les variabales objects sont des class hérité de la class Object.
+ELles contienent un constructeur, des méthode et propriétés. 
+
 | Raccourcis | Type |
 |:-----------|:-----|
 | String      | Peut contenir une chaîne de caractère |
@@ -131,6 +138,8 @@ int d = (int)c; // Le résultat sera 25
 
 
 ## héritage 
+
+### Différence entre une méthode surchargée et une méthode polymorphe.
 Une méthode surchargée diffère de la méthode originale par le nombre ou le type des paramètres qu'elle prend en entrée.
 
 Une méthode polymorphe a un squelette identique à la méthode de base, mais traite les choses différemment. Cette méthode se trouve dans une autre classe et donc, par extension, dans une autre instance de cette autre classe.
