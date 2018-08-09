@@ -29,7 +29,7 @@ On va regarder sur Wikipédia
 * TRES demandé sur le marché de l'emploi
 * Permt de fournir du bytes code (proche de l'assembleur)
 
-### Les incovénients de java
+### Les inconvénients de java
 
 * Syntaxe longue même très longue.
 * Plus complexe que la programmation web et donc c'est plus long à apprendre
