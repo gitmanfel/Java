@@ -27,7 +27,7 @@ On va regarder sur Wikipédia
 * Gestion de la mémoire n'est pas à charge du dev, contrairement au c++
 * On peut faire du web, des applis desktop ou encore android.
 * TRES demandé sur le marché de l'emploi
-* Permt de fournir du bytes code (proche de l'asembleur)
+* Permt de fournir du bytes code (proche de l'assembleur)
 
 ### Les incovénients de java
 
