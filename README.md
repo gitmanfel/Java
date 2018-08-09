@@ -17,7 +17,7 @@ On va regarder sur Wikipédia
 > dorénavant un langage utilisé pour toutes sortes de développements, distribués, client lourd ou léger, etc
 
 
-### Les avantages de Java
+#### Les avantages de Java
 
 * Relativement plus simple que le c++
 * Moins de bugs à gerer que le c++ (Surchage des opérateurs...)
@@ -29,7 +29,7 @@ On va regarder sur Wikipédia
 * TRES demandé sur le marché de l'emploi
 * Permt de fournir du bytes code (proche de l'assembleur)
 
-### Les inconvénients de java
+#### Les inconvénients de java
 
 * Syntaxe longue même très longue.
 * Plus complexe que la programmation web et donc c'est plus long à apprendre
