@@ -14,7 +14,7 @@
 * On peut faire du web, des applis desktop ou encore android.
 * TRES demandé sur le marché de l'emploi
 
-### Les incovenients de java
+### Les incovénients de java
 
 * Syntaxe longue même très longue.
 * Plus complexe que la programmation web et donc c'est plus long à apprendre
