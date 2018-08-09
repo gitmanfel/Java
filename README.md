@@ -2,6 +2,20 @@
 
 # Java
 
+## C'est quoi le java ?
+On va regarder sur Wikipédia 
+
+> Le langage Java a débuté dans les années 1990 avec James Gosling qui souhaitait développer un langage de programmation indépendant de > la plate-forme hardware. Oak (traduction : « Chêne ») fut un échec.
+
+> Par la suite, Bill Joy (cofondateur de la firme Sun Microsystems) proposa une nouvelle version de Oak appelée « Java ». Son but était > de pallier une déficience des langages de programmation en produisant un langage conçu pour des machines et des logiciels hétérogènes.
+
+> On trouve gratuitement sur le marché une machine virtuelle (Java Virtual Machine), qui inclut un compilateur, ainsi que de nombreux 
+> outils visant à faciliter l'investissement du Web par Java. Cette machine virtuelle exécute un bytecode Java (similaire à de 
+> l'assembleur) qui ajoute des étapes supplémentaires (décodage et interpretation) lors du runtime ce qui a pour conséquence de ralentir > fortement le fonctionnement d'une application par rapport à sa version compilée nativement (obtenue par exemple avec des langages tels  > que C ou C++).
+
+> Après de très nombreuses modifications visant à améliorer le système, Java est devenu plus qu’une simple solution Internet, c’est 
+> dorénavant un langage utilisé pour toutes sortes de développements, distribués, client lourd ou léger, etc
+
 
 ### Les avantages de Java
 
