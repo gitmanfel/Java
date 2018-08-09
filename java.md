@@ -1,10 +1,23 @@
 # Java
 
 
-## Les avantges de Java
+### Les avantages de Java
+
 * Relativement plus simple que le c++
 * Moins de bugs à gerer que le c++ (Surchage des opérateurs...)
 * Temps de production réduit par rapport au c++ de 30%
+* Java utilise le typage "fort" (Donc moins de possibilités d'erreurs).
+* Java est robuste...
+* Gestion de la mémoire n'est pas à charge du dev, contrairement au c++
+* On peut faire du web, des applis desktop ou encore android.
+* TRES demandé sur le marché de l'emploi
+
+### Les incovenients de java
+
+* Syntaxe longue même très longue.
+* Plus complexe que la programmation web et donc c'est plus long à apprendre
+
+### Petit rappel 
 
 |Nom |Correspondance  | 
 |:---|:---------------| 
