@@ -5,7 +5,7 @@
 ## C'est quoi le java ?
 On va regarder sur Wikipédia 
 
-> Le langage Java a débuté dans les années 1990 avec James Gosling qui souhaitait développer un langage de programmation indépendant de > la plate-forme hardware. Oak (traduction : « Chêne ») fut un échec.
+> Le langage Java a débuté dans les années 1990 avec James Gosling qui souhaitait développer un langage de programmation indépendant de  la plate-forme hardware. Oak (traduction : « Chêne ») fut un échec.
 
 > Par la suite, Bill Joy (cofondateur de la firme Sun Microsystems) proposa une nouvelle version de Oak appelée « Java ». Son but était > de pallier une déficience des langages de programmation en produisant un langage conçu pour des machines et des logiciels hétérogènes.
 
