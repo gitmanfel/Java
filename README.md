@@ -163,6 +163,7 @@ Elles contiennent un constructeur, des méthodes et propriétés.
 | Raccourcis | Type |
 |:-----------|:-----|
 | String      | Peut contenir une chaîne de caractère |
+| toutes les autres variables | 
 
 
 
