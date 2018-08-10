@@ -32,7 +32,7 @@ dorénavant un langage utilisé pour toutes sortes de développements, distribu�
 * Syntaxe longue même très longue.
 * Plus complexe que la programmation web et donc c'est plus long à apprendre
 
-## Petit rappel
+#### Petit rappel
 
 
 |Nom |Correspondance  | 
@@ -55,7 +55,7 @@ Quatre Octets = 256 exposant 4  = 4294967296 possibilités.
 Huit Octets = 256 exposant 8 = 1.9631688e+19 possibilités.
 ...
 
-### Les différents types de variables
+## Les variables
 **Déclaration et typage des variables**
 
 Les noms des variables doivent toujours commencer par une minuscule et être écrite en [camelCase](https://fr.wikipedia.org/wiki/Camel_case). 
@@ -210,10 +210,10 @@ switch (note)
     System.out.println("Il faut davantage travailler.");
 }
 ````
+## Les Tableaux
 
 
-
-## héritage 
+### héritage 
 
 ### Différence entre une méthode surchargée et une méthode polymorphe.
 Une méthode surchargée diffère de la méthode originale par le nombre ou le type des paramètres qu'elle prend en entrée.
