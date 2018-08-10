@@ -163,7 +163,7 @@ Elles contiennent un constructeur, des méthodes et propriétés.
 | Raccourcis | Type |
 |:-----------|:-----|
 | String      | Peut contenir une chaîne de caractère |
-| toutes les autres variables | 
+
 
 ## Les conditions 
 
@@ -212,6 +212,15 @@ switch (note)
 ````
 ## Les Tableaux
 
+La déclaration des tableaux ressemblent à celle d'une variable, mais avec des [] juste après le nom de la variable.
+Comme les tableaux sont eux aussi typé, on ne peut donc pas mélanger un tableau avec des integer avec des doubles, ou encore un tableau qui contiendrait des strings et des integers. On ne peut mettre qu'un seul type dans un tableau. 
+ 
+````java 
+int tableauEntier[] = {0,1,2,3,4,5,6,7,8,9};
+double tableauDouble[] = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};
+char tableauCaractere[] = {'a','b','c','d','e','f','g'};
+String tableauChaine[] = {"chaine1", "chaine2", "chaine3" , "chaine4"};
+````
 
 ### héritage 
 
