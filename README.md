@@ -33,7 +33,7 @@ dorénavant un langage utilisé pour toutes sortes de développements, distribu�
 * Plus complexe que la programmation web et donc c'est plus long à apprendre
 
 #### Petit rappel
-
+En java, les notions de valeurs sont très importantes. On fait un petit rappel sur les valeurs en informatique.
 
 |Nom |Correspondance  | 
 |:---|:---------------| 
