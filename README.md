@@ -167,6 +167,31 @@ Elles contiennent un constructeur, des méthodes et propriétés.
 
 ## Les conditions 
 
+Les conditions s'écrivent de la même manière qu'en php ou javascript. Si les instructions ne sont que sur une seule ligne vous pouvez vous passer des accolades. 
+
+````java 
+int nombre = 100;
+
+if(nombre < 100)
+{
+  System.out.printnl("Ce chiffre est en dessous de 100");
+}
+else
+{
+   System.out.printnl("Ce chiffre est au  dessus de 100");
+}
+
+
+// S'il n'y a qu'une seule ligne d'instruction, on peut se passer des accolades 
+if(nombre < 100)
+  System.out.printnl("Ce chiffre est en dessous de 100");
+else
+   System.out.printnl("Ce chiffre est au  dessus de 100");
+
+````
+
+En java, on utilise beaucoup les switch, elles s'ecrivent comme en php.
+
 ````java
 int note = 10; //On imagine que la note maximale est 20
 
