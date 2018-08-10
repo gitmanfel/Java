@@ -222,7 +222,13 @@ char tableauCaractere[] = {'a','b','c','d','e','f','g'};
 String tableauChaine[] = {"chaine1", "chaine2", "chaine3" , "chaine4"};
 ````
 
-### héritage 
+## Les boucles 
+
+## Les fonctions
+
+## Les class 
+
+## L'héritage de class
 
 ### Différence entre une méthode surchargée et une méthode polymorphe.
 Une méthode surchargée diffère de la méthode originale par le nombre ou le type des paramètres qu'elle prend en entrée.
