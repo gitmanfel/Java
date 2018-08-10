@@ -165,6 +165,27 @@ Elles contiennent un constructeur, des méthodes et propriétés.
 | String      | Peut contenir une chaîne de caractère |
 | toutes les autres variables | 
 
+## Les conditions 
+
+````java
+int note = 10; //On imagine que la note maximale est 20
+
+switch (note)
+{
+  case 0:
+    System.out.println("Ouch !");
+    break;
+  case 10:
+    System.out.println("Vous avez juste la moyenne.");
+    break;
+  case 20:
+    System.out.println("Parfait !");
+    break;
+  default:
+    System.out.println("Il faut davantage travailler.");
+}
+````
+
 
 
 ## héritage 
