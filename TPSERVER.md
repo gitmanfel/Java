@@ -205,6 +205,36 @@ class Conversation extends Thread {
 ````
 
 ## Ecoute le flux
+Grâce à l'objet InputStream et OutputStream nous allons pouvoir écouter les flux entrant et sortant. 
+InputStream et OutputStream communique par 4 octets. Soit un caractère.
+````Java
+InputStream inputstream = socket.getInputStream();
+OutputStream outputstream = socket.getOutputStream();
+````
+
+Mais vous le voyez il indique une erreur sur getinpuSTream. Comme il s'agit d'établir une connexion, il se peut évenutellment qu'il ait une erreur. On doit donc gérer ça. Passer votre souris sur l'erreur et cliquez sur "Surrond with Try and Catch"
+
+````java
+@Override
+	public void run() {
+		try {
+			InputStream inputstream = socket.getInputStream();
+			
+			OutputStream outputstream = socket.getOutputStream();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+````
+
+Ensuite on a besoin de décoder ce caractère et notamment son charset. On peut faire cela avec 
+````java
+InputStreamReader inputstreamreader = new InputStreamReader(inputstream);
+````
+
+
+
 
 
 
