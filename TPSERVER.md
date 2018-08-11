@@ -19,7 +19,7 @@ public class Server {
 ````
 ### Le Multithread
 
-> Un processeur est dit multithread s'il est capable d'exécuter efficacement plusieurs threads simultanément. Les threads doivent partager les ressources d'un unique cœur. 
+Contrairement au php ou javascript, java est un langage Multithread. C'est à dire qu'il est capable d'effectuer plusieurs tâches en même temps. On ca donc créer une tâche qui s"occupera de gérer les autres tâches.
 
 On va créer un thread qui va gérer la connexion des utilisateurs. Pour ce faire, il faut qu'on fasse un héritage de la class Thread. En étendant cette class, nous allons devoir redifinir une méthode appellée run(){
 }
