@@ -246,7 +246,7 @@ for (int i = 0; i < number; i++) {
 ````java
 String[] students = {"Jérôme", "Sarah", "David", "Romain"};	
 for (String student : students) 
-	System.out.println(student);
+    System.out.println(student);
 		
 ````
 
@@ -254,14 +254,14 @@ for (String student : students)
 ````java 
 int y = 19;
 while(y < 49) {
-	y++;
-	System.out.println(y);
+   y++;
+   System.out.println(y);
 }
     
     
 // Boucle Do While s'exucute au moins une fois
 do {
-	System.out.println("Je m'execute au moins une fois " + y);
+     System.out.println("Je m'execute au moins une fois " + y);
 } while ( y < 10 ) ;	
 
     
