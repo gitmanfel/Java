@@ -1,6 +1,6 @@
 # Java
 
-[Java, Mon premier serveur](TPSERVER.md)
+[Java, Mon premier Mini-chat](TPSERVER.md)
 ## C'est quoi le java ?
 On va regarder sur Wikipédia 
 
@@ -265,7 +265,10 @@ do {
 
     
 ````
+## Next step
 
+
+[Java, Mon premier Mini-chat](TPSERVER.md)
 
 
 
