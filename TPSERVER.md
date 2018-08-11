@@ -336,6 +336,22 @@ public class Test extends Thread {
 	//...
 ````
 
+Et la fonction 
+
+````java
+public void broadCast(String message) {
+		for(Socket client : clients) {
+			try {
+				PrintWriter printWriter = new PrintWriter(client.getOutputStream(), true);
+				printWriter.println(message); 
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+````
+
 
 
 
