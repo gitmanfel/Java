@@ -17,7 +17,11 @@ public class Server {
 	}
 }
 ````
-Il faut qu'on fasse un héritage de la class Thread. En étendant cette class, nous allons devoir redifinir une méthode appellée run(){
+## Le Multithread
+
+> Un processeur est dit multithread s'il est capable d'exécuter efficacement plusieurs threads simultanément. Les threads doivent partager les ressources d'un unique cœur. 
+
+On va créer un thread qui va gérer la connexion des utilisateurs. Pour ce faire, il faut qu'on fasse un héritage de la class Thread. En étendant cette class, nous allons devoir redifinir une méthode appellée run(){
 }
 ````java
 public class Server extends Thread {
