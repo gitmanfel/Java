@@ -124,6 +124,7 @@ Ensuite
 java Server
 ````
 Il n'y a rien c'est normal. Prenez votre client telnet, et tapez l'adresse ip du server et le port
+
 ````bash
 telnet 192.168.4.44 400
 ````
