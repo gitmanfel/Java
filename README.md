@@ -44,11 +44,11 @@ En java, les notions de valeurs sont très importantes. On fait un petit rappel 
 |Giga octet | Regroupement de 1024 Mo |
 |Tera octet | Regroupement de 1024 Go |
 
-Un bit = 2 possibilités.
-Un octet =  2 exposant 8, ça fait 256 possibilités.
-Deux Octets = 256 * 256 = 65536 possibilités.
-Quatre Octets = 256 exposant 4  = 4294967296 possibilités.
-Huit Octets = 256 exposant 8 = 1.9631688e+19 possibilités.
+Un bit = 2 possibilités.  
+Un octet =  2 exposant 8, ça fait 256 possibilités.  
+Deux Octets = 256 * 256 = 65536 possibilités.  
+Quatre Octets = 256 exposant 4  = 4294967296 possibilités.  
+Huit Octets = 256 exposant 8 = 1.9631688e+19 possibilités.  
 
 ...
 
