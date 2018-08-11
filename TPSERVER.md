@@ -316,9 +316,28 @@ while(true) {
 }
 ````
 
-Le client reçoit donc le message "Message envoyé". Seul lui le voit voit ce message. Problème on voit actuellement la reponse anvoyé sur la console su serveur mais pas du client.
+Le client reçoit donc le message "Message envoyé". Seul lui le voit voit ce message. Problème on voit actuellement la reponse envoyé sur la console du serveur mais pas du client. Pour ce faire on va devoir créer une fonction qui envoie le message à tous les clients. 
 
-### Broadcast 
+### Broadcast (On y est presque)
+Première chose, nous avons besoin d'avoir tous les sockets créer.
+Pour ce faire on va créer un ArrayList qui va contenir le socket des tous les gens connectés. 
+Nous allons donc déclarer cette variable au tout début du script. Avant meême la méthode main de la class Server
+
+````java
+private ArrayList<Socket> clients = new ArrayList<>(); 
+````
+
+ce qui devrait donner 
+````java
+public class Test extends Thread {
+	private ArrayList<Socket> clients = new ArrayList<>(); 
+	int idClient;
+	
+	//...
+````
+
+
+
 
 
 
