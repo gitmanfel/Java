@@ -1,5 +1,3 @@
-![JAVA](./java.png)
-
 # Java
 
 [Java, Mon premier serveur](TPSERVER.md)
