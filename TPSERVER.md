@@ -71,11 +71,12 @@ Tout d'abord nous allons créer une variable int pour donner des id's aux client
 ````java 
 	int idClient;
 ````
-Il faut la mettre en **golbal** donc en début de script. Ensuite dans la boucle while, on incrémente cet id à chaque fois que quelqu'un se connecte. 
+Il faut la mettre en **golbal** donc en début de script. Ensuite dans la boucle while, on incrémente cet id à chaque fois que quelqu'un se connecte. On va mettre aussi un message prévennant qu'un client s'est connecté
 
 ````
 while(true) {				
-	Socket socket = ss.accept();			
+	Socket socket = ss.accept();
+	System.out.println("Un client vien de se connecter");
 	++idClient;				
 }
 ````
@@ -91,7 +92,8 @@ public class Test {
 		try {
 			ServerSocket ss = new ServerSocket(1800);
 			while(true) {				
-				Socket socket = ss.accept();			
+				Socket socket = ss.accept();
+				System.out.println("Un client vien de se connecter");
 				++idClient;			
 			}			
 		} catch (IOException e) {
@@ -112,6 +114,21 @@ On va devoir créer une nouvelle class nommée "Conversation" qui étendra égal
 
 On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifint à noiuveau la méthode run().
 
+Allez dans le terminal dans votre dossier actuel. 
+````bash
+cd TPServer/bin
+````
+
+Ensuite 
+````bash
+java Server
+````
+Il n'y a rien c'est normal. Prenez votre client telnet, et tapez l'adresse ip du server et le port
+````bash
+telnet 192.168.4.44 400
+````
+
+Vous devriez voir dans la console du serveur : "Un client vien de se connecter"
 
 ````java
 class Conversation extends Thread { 
@@ -135,7 +152,8 @@ public class Serevr {
 		try {
 			ServerSocket ss = new ServerSocket(1800);
 			while(true) {				
-				Socket socket = ss.accept();			
+				Socket socket = ss.accept();
+				System.out.println("Un client vien de se connecter");
 				++idClient;				
 			}
 			
@@ -161,6 +179,7 @@ public class Serevr {
 ````
 Nous allons continuer à construire cette class. Pour poursuivre nous aurons besoin de 2 informations Le socket (donc le connecteur reseaux) et l'id du client. On va donc créer 2 variables
 
+Voyons déjà ce que àa donne 
 
 ````java
 class Conversation extends Thread {
@@ -182,6 +201,7 @@ public Conversation(Socket socket, int idClient) {
 	this.idClient = idClient;
 }
 ````
+
 Ce qui devrait donner  
 
 ````java 
@@ -232,6 +252,15 @@ Ensuite on a besoin de décoder ce caractère et notamment son charset. On peut 
 ````java
 InputStreamReader inputstreamreader = new InputStreamReader(inputstream);
 ````
+
+Là actuellement on a toujours un problème, par ce que on reçoit caractère par caractère et c'est pas ce qu'on veut.On veut recevoir une phrase en entier. ET pour cela on va utiliser bufferedReader
+````
+BufferedReader bufferedreader = new BufferedReader(inputstreamreader);
+````
+
+
+
+
 
 
 
