@@ -72,6 +72,31 @@ while(true) {
 }
 ````
 
+vous devriez voir quelque chose comme ça :
+
+````java 
+public class Test {	
+	int idClient;
+	
+	@Override
+	public void run() {  // On redifinit la méthode
+		try {
+			ServerSocket ss = new ServerSocket(1800);
+			while(true) {				
+				Socket socket = ss.accept();			
+				++idClient;			
+			}			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 		
+	}
+	
+	public static void main(String[] args) {
+		new ServerMT().start();
+	}		
+}
+
+````
 
 
 
