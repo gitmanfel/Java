@@ -2,6 +2,7 @@
 
 # Java
 
+[Java, Mon premier serveur](TPSERVER.md)
 ## C'est quoi le java ?
 On va regarder sur Wikipédia 
 
