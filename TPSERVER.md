@@ -44,10 +44,34 @@ public static void main(String[] args) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}		
-} ````
+} 
+````
+
+La méthode ```System.out.println(String string);``` est une méthode de java qui permet d'afficher du texte dans la console. On va donc l'utiliser pour savoir on en est.
+
+````java 
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	try {
+		ServerSocket serversocket = new ServerSocket(4900);
+		// On ajoute un message 
+		System.out.println("J'attends la connexion d'un client");		
+		
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}		
+}````
+
+````
+
 
 
 ````
+
+
+
+
 
 
 
