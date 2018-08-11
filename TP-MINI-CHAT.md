@@ -23,6 +23,7 @@ Contrairement au php ou javascript, java est un langage Multithread. C'est à di
 
 On va créer un thread qui va gérer la connexion des utilisateurs. Pour ce faire, il faut qu'on fasse un héritage de la class Thread. En étendant cette class, nous allons devoir redifinir une méthode appellée run(){
 }
+
 ````java
 public class Server extends Thread {
 	public static void main(String[] args) {	
