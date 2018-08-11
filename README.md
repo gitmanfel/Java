@@ -57,8 +57,7 @@ Huit Octets = 256 exposant 8 = 1.9631688e+19 possibilités.
 ## Les variables
 **Déclaration et typage des variables**
 
-Les noms des variables doivent toujours commencer par une minuscule et être écrite en [camelCase](https://fr.wikipedia.org/wiki/Camel_case). 
-
+Les noms des variables doivent toujours commencer par une minuscule et être écrite en [camelCase](https://fr.wikipedia.org/wiki/Camel_case).  
 Lorsqu'on veut déclarer une variable, on doit la typer.
 ```java
 TypeDeVariable  nomDeVariable;
@@ -116,14 +115,14 @@ String prhase = "passe une bonne journée";
 
 **Attention pour les float et les doubles** 
 
-On ne mets pas de virgule pour exprimer un chiffre décimal, on utilise un point. 
+On ne mets pas de virgule pour exprimer un chiffre décimal, on utilise un point.  
 En java on écrit les float de cette manière. 
 
 ````java
 float decimal = 0.637f;
 
 ````
-On rappelle toujours à Java qu'il s'agit d'un float à la fin avec le ``f``
+On rappelle toujours à Java qu'il s'agit d'un float à la fin avec le ``f``  
 
 Et de même pour les doubles
 
