@@ -390,6 +390,115 @@ public void broadCast(String message) {
 	}
 ````
 
+Le script complet 
+````java 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class Server extends Thread {
+	private ArrayList<Socket> clients = new ArrayList<>(); 
+	int idClient;
+	
+	public static void main(String[] args) {
+		new Test().start();
+	}
+	
+	@Override
+	public void run() {  // On redifinit la méthode
+		try {
+			ServerSocket ss = new ServerSocket(1700);
+			while(true) {				
+				Socket socket = ss.accept();
+				System.out.println("Un client vient de se connecter");
+				clients.add(socket);
+				++idClient;
+				new Conversation(socket, idClient).start();
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+	}
+	
+	
+	class Conversation extends Thread { 
+		
+		private Socket socket;
+		private int idClient;
+		
+		public Conversation(Socket socket, int idClient) {
+			this.socket = socket;
+			this.idClient = idClient;
+		}
+		
+		@Override
+		public void run() {
+			try {
+				InputStream inputstream = socket.getInputStream();
+				InputStreamReader inputstreamreader = new InputStreamReader(inputstream);
+				BufferedReader bufferedreader = new BufferedReader(inputstreamreader);
+				
+				OutputStream outputstream = socket.getOutputStream();
+				PrintWriter printWriter = new PrintWriter(outputstream, true);
+				
+				printWriter.println("Bienvenue vous etes le client " + idClient);
+				
+				String ip = socket.getRemoteSocketAddress().toString();
+				System.out.println("Connexion avec l'ip : " + ip);
+				
+
+				while(true) {
+					String request;
+					while((request = bufferedreader.readLine()) != null) {					
+						String reponse = ip +  " envoie le message :" + request;
+						System.out.println(reponse);
+						
+						printWriter.println("\n Message envoye \n");
+						broadCast(reponse);
+					}						
+					
+				}
+				
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+		}
+		
+	}
+	
+	public void broadCast(String message) {
+		for(Socket client : clients) {
+			try {
+				PrintWriter printWriter = new PrintWriter(client.getOutputStream(), true);
+				printWriter.println(message); 
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+
+		
+}
+
+
+````
+
 
 
 
