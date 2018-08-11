@@ -106,13 +106,6 @@ public class Test {
 	}		
 }
 ````
-### Créations des sockets pour chaque client
-On va devoir créer une nouvelle class nommée "Conversation" qui étendra également de thread. Pour chaque client connecté, cette class devra être instancié. Si non, on pourrait pas se connecter à plusieurs en même temps sur le serveur.
-
-![Image multithread](Capturejava.JPG)
-
-
-On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifint à noiuveau la méthode run().
 
 Allez dans le terminal dans votre dossier actuel. 
 ````bash
@@ -130,6 +123,16 @@ telnet 192.168.4.44 400
 ````
 
 Vous devriez voir dans la console du serveur : "Un client vien de se connecter"
+
+### Créations des sockets pour chaque client
+On va devoir créer une nouvelle class nommée "Conversation" qui étendra également de thread. Pour chaque client connecté, cette class devra être instancié. Si non, on pourrait pas se connecter à plusieurs en même temps sur le serveur.
+
+
+![Image multithread](Capturejava.JPG)
+
+
+On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifinit à noiuveau la méthode run().
+
 
 ````java
 class Conversation extends Thread { 
@@ -178,9 +181,9 @@ public class Serevr {
 		
 }
 ````
-Nous allons continuer à construire cette class. Pour poursuivre nous aurons besoin de 2 informations Le socket (donc le connecteur reseaux) et l'id du client. On va donc créer 2 variables
+Nous allons continuer à construire cette class. Pour poursuivre nous aurons besoin d informations Le socket (donc le connecteur reseaux) et l'id du client. On va donc créer 2 variables
 
-Voyons déjà ce que àa donne 
+Voyons déjà ce que cela donne 
 
 ````java
 class Conversation extends Thread {
@@ -259,23 +262,13 @@ Là actuellement on a toujours un problème, par ce que on reçoit caractère pa
 BufferedReader bufferedreader = new BufferedReader(inputstreamreader);
 ````
 
+Maintenant nous allons écrire un message de bienvenue au nouveau client qui vient de se connecter. Nous écrivons donc dans le flux sortant. Pour ce faire nous allons utiliser l'objet PrintWriter. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+````java
+PrintWriter printWriter = new PrintWriter(outputstream, true);
+printWriter.println("Bienvenue vous êtes le client " + idClient);
+````
+ok il est temps d'instancier cette class conversation 
 
 Maintenant allons dans la boucle se trouvant dans la méthode run() de la class **Server** et on instancie notre nouvelle class
 
@@ -287,6 +280,7 @@ public void run() {  // On redifinit la méthode
 		while(true) {				
 			Socket socket = ss.accept();
 			++idClient;
+			System.out.println("Un client vient de se connecter");
 			new Conversation(socket, idClient).start();
 		}
 
@@ -295,6 +289,33 @@ public void run() {  // On redifinit la méthode
 	} 
 	
 ````
+
+relancez telnet.
+
+Vous voyez le message de Bienvenue ? 
+
+Retournons dans la class Conversation. Nous voulons identifier le client avec son adresse Ip. 
+
+````java
+	
+	String ip = socket.getRemoteSocketAddress().toString();
+	System.out.println("Connexion avec l'ip : " + ip);
+````
+
+Nous allons maintenant écouter quand un client envoi un message. On doit faire deux boucles dont une infinie. La première écoutera en permanence les nouveaux messages. La seconde est là pour vérifier que le message n'est pas égal à Null.
+
+````java
+while(true) {
+	String request;
+	while((request = bufferedreader.readLine()) != null) {					
+		String reponse = ip +  " envoie le message :" + request + "\n";
+		System.out.println(reponse);
+		printWriter.println("\n Message envoye \n");		
+	}						
+
+}
+````
+
 		
 
 
