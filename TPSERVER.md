@@ -112,7 +112,7 @@ class Conversation extends Thread {
 Ce qui devrait donner ceci
 ````java 
 
-public class Test {
+public class Serevr {
 
 	int idClient;
 	
@@ -122,8 +122,7 @@ public class Test {
 			ServerSocket ss = new ServerSocket(1800);
 			while(true) {				
 				Socket socket = ss.accept();			
-				++idClient;
-				
+				++idClient;				
 			}
 			
 		} catch (IOException e) {
@@ -146,6 +145,85 @@ public class Test {
 		
 }
 ````
+Nous allons continuer à construire cette class. Pour poursuivre nous aurons besoin de 2 informations Le socket (donc le connecteur reseaux) et l'id du client. On va donc créer 2 variables
+
+
+````java
+class Conversation extends Thread {
+	private Socket socket;
+	private int idClient;
+	
+	@Override
+	public void run() {
+
+	}
+}
+````
+
+Ensuite on va le récuperer les valeurs avec le constructeur
+
+````java
+public Conversation(Socket socket, int idClient) {
+	this.socket = socket;
+	this.idClient = idClient;
+}
+````
+Ce qui devrait donner  
+
+````java 
+class Conversation extends Thread { 
+
+	private Socket socket;
+	private int idClient;
+
+	public Conversation(Socket socket, int idClient) {
+		this.socket = socket;
+		this.idClient = idClient;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+````
+
+## Ecoute le flux
+
+
+
+
+
+
+
+
+
+
+
+
+Maintenant allons dans la boucle se trouvant dans la méthode run() de la class **Server** et on instancie notre nouvelle class
+
+````java 
+
+public void run() {  // On redifinit la méthode
+	try {
+		ServerSocket ss = new ServerSocket(1800);
+		while(true) {				
+			Socket socket = ss.accept();
+			++idClient;
+			new Conversation(socket, idClient).start();
+		}
+
+	} catch (IOException e) {
+		e.printStackTrace();
+	} 
+	
+````
+		
+
+
 
 
 
