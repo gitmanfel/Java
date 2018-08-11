@@ -16,7 +16,7 @@ public class Server {
 ````
 
 ## Création du serveur 
-La méthode main est automatiquement appelée quand l'application (ici le server) est lancé.  
+La méthode main est automatiquement appelée quand l'application (ici le server) est lancée.  
 ````
 public static void main(String[] args)
 ````
