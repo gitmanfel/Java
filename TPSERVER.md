@@ -39,8 +39,7 @@ public static void main(String[] args) {
 ````
 
 
-A chaque fois que quelqu'un se connecte au serveur, il faut créer un nouveau thread. 
-Ici On ceer un server sur le port 1800. Ici le seul moyen de dire au serveur que les clients peuvent se connecter n'importe quand c'est en faisant en boucle infinie. Si non le script va s'éxécuter qu'une seul fois lors de la  premiere connexion d'un client et les autres clients n'auront plus acces au server.
+Ici On ceer un server sur le port 1800. Le seul moyen de dire au serveur que les clients peuvent se connecter n'importe quand c'est en faisant en boucle infinie. Si non le script va s'éxécuter qu'une seul fois lors de la  premiere connexion d'un client et les autres clients n'auront plus acces au server.
 
 ````java 
 @Override
