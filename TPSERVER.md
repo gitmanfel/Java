@@ -65,6 +65,31 @@ public static void main(String[] args) {
 ````
 
 
+Puisque c'est un serveur, il faut gérer les flux entrants et les flux sortants.
+On va pouvoir le faire avec les objets InputStrem et OutputStream qui sont des objets faisant parti de la librairie java.
+Ensuite on va pouvoir lire l'inputstream. 
+
+````java 
+// Gérer les flux entrant et sortant...
+	InputStream inputstream = socket.getInputStream();
+	OutputStream outputstream = socket.getOutputStream();
+	
+// Message dans la console et on lit le flux venant de input stream
+	System.out.println("J'attends un nombre");			
+	int query = inputstream.read();
+````
+
+On envoie ensuite la réponse d'une à reçu une réponse. On va multiplier le chiffre envoyer par 8 pour l'exemple.
+
+````java 
+System.out.println("J'envoie la réponse");
+int response = query * 8;
+outputstream.write(response);
+
+````
+
+
+
 
 
 
