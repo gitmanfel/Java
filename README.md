@@ -267,7 +267,7 @@ do {
 ## Next step
 
 
-[Java, Mon premier Mini-chat](TPSERVER.md)
+[Java, Mon premier Mini-chat](TP-MINI-CHAT.md)
 
 
 
