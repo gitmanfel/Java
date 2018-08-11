@@ -119,7 +119,7 @@ java Server
 Il n'y a rien c'est normal. Prenez votre client telnet, et tapez l'adresse ip du server et le port
 
 ````bash
-telnet 192.168.4.44 400
+telnet 192.168.4.44 1800
 ````
 
 Vous devriez voir dans la console du serveur : "Un client vien de se connecter"
@@ -315,6 +315,13 @@ while(true) {
 
 }
 ````
+
+Le client reçoit donc le message "Message envoyé". Seul lui le voit voit ce message. Problème on voit actuellement la reponse anvoyé sur la console su serveur mais pas du client.
+
+### Broadcast 
+
+
+
 
 		
 
