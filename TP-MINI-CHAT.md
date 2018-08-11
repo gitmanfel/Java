@@ -336,6 +336,44 @@ public class Test extends Thread {
 	//...
 ````
 
+Du coup,à chaque connexion on doit ajouter le socket à la lsite. On doit le rajouter dans la méthode run() de **Server**
+````java
+clients.add(socket);
+````
+
+Ce qui donne 
+````java 
+
+public class Server extends Thread {
+	private ArrayList<Socket> clients = new ArrayList<>(); 
+	int idClient;
+	
+	public static void main(String[] args) {
+		new Test().start();
+	}
+	
+	@Override
+	public void run() {  // On redifinit la méthode
+		try {
+			ServerSocket ss = new ServerSocket(1700);
+			while(true) {				
+				Socket socket = ss.accept();
+				System.out.println("Un client vient de se connecter");
+				clients.add(socket);
+				++idClient;
+				new Conversation(socket, idClient).start();
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+	}
+	
+	//...
+
+````
+
 Et la fonction 
 
 ````java
