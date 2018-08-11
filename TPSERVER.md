@@ -1,6 +1,9 @@
 # Création d'un mini-chat en java
 
+## Création du projet.
 Alors la première chose, il créer un Projet ``` File -> New -> Java Project  ```. Nommez le "Server"
+
+## Création de la class Server
 
 Ensuite il faut créer une class nommée "Server"  ``` File -> New -> Class ```  
 Cochez la case ``` public static void main(String[] args) ```  
