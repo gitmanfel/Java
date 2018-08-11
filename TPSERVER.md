@@ -82,10 +82,10 @@ Ensuite on va pouvoir lire l'inputstream.
 On envoie ensuite la réponse d'une à reçu une réponse. On va multiplier le chiffre envoyer par 8 pour l'exemple.
 
 ````java 
-System.out.println("J'envoie la réponse");
-int response = query * 8;
-outputstream.write(response);
-
+// On envoie la réponse 
+	System.out.println("J'envoie la réponse");
+	int response = query * 8;
+	outputstream.write(response);
 ````
 
 
