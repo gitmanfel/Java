@@ -244,48 +244,38 @@ for (int i = 0; i < number; i++) {
 
 **Les boucles foreach**
 ````java
-		String[] students = {"Jérôme", "Sarah", "David", "Romain"};		
-		
-    
-		for (String student : students) 
-			System.out.println(student);
+	String[] students = {"Jérôme", "Sarah", "David", "Romain"};	
+	for (String student : students) 
+		System.out.println(student);
 		
 ````
 
 **Les boucles while**
 ````java 
 int y = 19;
-		while(y < 49) {
-			y++;
-			System.out.println(y);
-		}
+while(y < 49) {
+	y++;
+	System.out.println(y);
+}
     
     
-    // Boucle Do While s'exucute au moins une fois
-    do {
-			System.out.println("Je m'execute au moins une fois " + y);
-		} while ( y < 10 ) ;	
-		      
+// Boucle Do While s'exucute au moins une fois
+do {
+	System.out.println("Je m'execute au moins une fois " + y);
+} while ( y < 10 ) ;	
+
     
 ````
 
 
 
-````
 
 
 
 
-## Les fonctions
 
-## Les class 
 
-## L'héritage de class
 
-### Différence entre une méthode surchargée et une méthode polymorphe.
-Une méthode surchargée diffère de la méthode originale par le nombre ou le type des paramètres qu'elle prend en entrée.
-
-Une méthode polymorphe a un squelette identique à la méthode de base, mais traite les choses différemment. Cette méthode se trouve dans une autre classe et donc, par extension, dans une autre instance de cette autre classe.
 
 
 
