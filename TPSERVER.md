@@ -321,7 +321,7 @@ Le client reçoit donc le message "Message envoyé". Seul lui le voit voit ce me
 ### Broadcast (On y est presque)
 Première chose, nous avons besoin d'avoir tous les sockets créer.
 Pour ce faire on va créer un ArrayList qui va contenir le socket des tous les gens connectés. 
-Nous allons donc déclarer cette variable au tout début du script. Avant meême la méthode main de la class Server
+Nous allons donc déclarer cette variable au tout début du script. Avant même la méthode main de la class Server
 
 ````java
 private ArrayList<Socket> clients = new ArrayList<>(); 
