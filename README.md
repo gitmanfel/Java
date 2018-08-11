@@ -161,6 +161,8 @@ Elles contiennent un constructeur, des méthodes et propriétés.
 | Raccourcis | Type |
 |:-----------|:-----|
 | String      | Peut contenir une chaîne de caractère |
+| String[]      | Peut contenir un tableaux contenant des chaînes de caractère |
+| toutes les autres variables |
 
 
 ## Les conditions 
@@ -218,9 +220,61 @@ int tableauEntier[] = {0,1,2,3,4,5,6,7,8,9};
 double tableauDouble[] = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};
 char tableauCaractere[] = {'a','b','c','d','e','f','g'};
 String tableauChaine[] = {"chaine1", "chaine2", "chaine3" , "chaine4"};
+
+// Multi dimenssionnelle
+
+
+String multiTableauChaine[][] = {
+    {"tableau1_chaine1", "tableau1_chaine2", "tableau1_chaine3" , "tableau1_chaine4"},
+    {"tableau2_chaine1", "tableau2_chaine", "tableau2_chaine3" , "tableau2_chaine4"},
+    {"tableau3_chaine1", "tableau3_chaine2", "tableau3_chaine3" , "tableau3_chaine4"}
+};
 ````
 
 ## Les boucles 
+Les bvoucles sont similaires aux languages de programmation. 
+
+**Les boucles for**
+````java
+int number = 49;
+for (int i = 0; i < number; i++) {
+    System.out.println("Le chiffre est le " + i);
+}
+````
+
+**Les boucles foreach**
+````java
+		String[] students = {"Jérôme", "Sarah", "David", "Romain"};		
+		
+    
+		for (String student : students) 
+			System.out.println(student);
+		
+````
+
+**Les boucles while**
+````java 
+int y = 19;
+		while(y < 49) {
+			y++;
+			System.out.println(y);
+		}
+    
+    
+    // Boucle Do While s'exucute au moins une fois
+    do {
+			System.out.println("Je m'execute au moins une fois " + y);
+		} while ( y < 10 ) ;	
+		      
+    
+````
+
+
+
+````
+
+
+
 
 ## Les fonctions
 
