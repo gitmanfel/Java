@@ -105,7 +105,7 @@ public class Test {
 }
 ````
 ### Créations des sockets pour chaque client
-![Image multithread](Capturejava.jpg)
+![Image multithread](Capturejava.JPG)
 On va devoir créer une nouvelle class nommée "Converstaion" qui étendra également de thread. On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifint à noiuveau la méthode run().
 
 ````java
