@@ -244,9 +244,9 @@ for (int i = 0; i < number; i++) {
 
 **Les boucles foreach**
 ````java
-	String[] students = {"Jérôme", "Sarah", "David", "Romain"};	
-	for (String student : students) 
-		System.out.println(student);
+String[] students = {"Jérôme", "Sarah", "David", "Romain"};	
+for (String student : students) 
+	System.out.println(student);
 		
 ````
 
