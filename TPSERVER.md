@@ -29,18 +29,7 @@ public class Server extends Thread {
 }
 ````
 
-En effet un Thread va gérer les autres thread. A chaque fois que quelqu'un se connecteau serveur, il faut créer un nouveau thread. 
-
-
-
-
-## Création du serveur 
-La méthode main est automatiquement appelée quand l'application (ici le server) est lancée.  
-````
-public static void main(String[] args)
-````
-C'est donc là que tout va se passer. C'est le point central de notre application. 
-C'est dans cette méthode que nous allons utilser notre première objet. 
+Dans la méthode ``main`` nous allons utilser notre première objet. On instacie la class server qui va appeller la méthode run ici plus haut.
 
 ````java
 public static void main(String[] args) {  
@@ -49,63 +38,49 @@ public static void main(String[] args) {
 }
 ````
 
-Mais là on voit que l'ide souligne la ligne qu'on vient d'ajouter. C'est à cause que la méthode renvoie une erreur si jamais quelque chose se passait mal, et qu'en java, on est obligé de gérer les erreurs potentiels. Ici on va donc utiliser un try and catch.
-Vous pouvez soit l"écrire soit simplement pointer la souris sur la phrase et cliquez sur "Surrond with try/catch" 
 
-Vous devriez avoir ceci : 
+A chaque fois que quelqu'un se connecte au serveur, il faut créer un nouveau thread. 
+Ici On ceer un server sur le port 1800. Ici le seul moyen de dire au serveur que les clients peuvent se connecter n'importe quand c'est en faisant en boucle infinie. Si non le script va s'éxécuter qu'une seul fois lors de la  premiere connexion d'un client et les autres clients n'auront plus acces au server.
 
 ````java 
-public static void main(String[] args) {
-	// TODO Auto-generated method stub
+@Override
+public void run() {  // On redifinit la méthode
 	try {
-		ServerSocket serversocket = new ServerSocket(4900);
+		ServerSocket ss = new ServerSocket(1800);
+		while(true) {				
+			Socket socket = ss.accept();
+		}
+
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
-	}		
-} 
+	} 
+
+}
 ````
+En java, on est obligé de gérer les erreurs potentiels. Ici on va donc utiliser un try and catch.
 
-La méthode ```System.out.println(String string);``` est une méthode de java qui permet d'afficher du texte dans la console. On va donc l'utiliser pour savoir on en est.
-
+Maintenant que nous avons une connexion au serveur nous allons faire des actions.
+Tout d'abord nous allons créer une variable int pour donner des id's aux client
 ````java 
-public static void main(String[] args) {
-	// TODO Auto-generated method stub
-	try {
-		ServerSocket serversocket = new ServerSocket(4900);
-		// On ajoute un message 
-		System.out.println("J'attends la connexion d'un client");		
-		
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}		
+	int idClient;
+````
+Il faut la mettre en **golbal** donc en début de script. ensuite dans la boucle while, on incrémente cet id. 
+
+````
+while(true) {				
+	Socket socket = ss.accept();			
+	++idClient;				
 }
 ````
 
 
-Puisque c'est un serveur, il faut gérer les flux entrants et les flux sortants.
-On va pouvoir le faire avec les objets InputStrem et OutputStream qui sont des objets faisant parti de la librairie java.
-Ensuite on va pouvoir lire l'inputstream. 
 
-````java 
-// Gérer les flux entrant et sortant...
-	InputStream inputstream = socket.getInputStream();
-	OutputStream outputstream = socket.getOutputStream();
-	
-// Message dans la console et on lit le flux venant de input stream
-	System.out.println("J'attends un nombre");			
-	int query = inputstream.read();
-````
 
-On envoie ensuite la réponse d'une à reçu une réponse. On va multiplier le chiffre envoyer par 8 pour l'exemple.
 
-````java 
-// On envoie la réponse 
-	System.out.println("J'envoie la réponse");
-	int response = query * 8;
-	outputstream.write(response);
-````
+
+
+
+
 
 
 
