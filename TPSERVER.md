@@ -17,7 +17,7 @@ public class Server {
 	}
 }
 ````
-## Le Multithread
+### Le Multithread
 
 > Un processeur est dit multithread s'il est capable d'exécuter efficacement plusieurs threads simultanément. Les threads doivent partager les ressources d'un unique cœur. 
 
@@ -36,6 +36,7 @@ public class Server extends Thread {
 }
 ````
 
+### Définitions de la méthode main
 Dans la méthode ``main`` nous allons utilser notre première objet. On instacie la class server qui va appeller la méthode run ici plus haut.
 
 ````java
@@ -45,8 +46,8 @@ public static void main(String[] args) {
 }
 ````
 
-
-Ici On ceer un server sur le port 1800. Le seul moyen de dire au serveur que les clients peuvent se connecter n'importe quand c'est en faisant en boucle infinie. Si non le script va s'éxécuter qu'une seul fois lors de la  premiere connexion d'un client et les autres clients n'auront plus acces au server.
+### Création du serveur
+Ici on ceer un server sur le port 1800. Le seul moyen de dire au serveur que les clients peuvent se connecter n'importe quand c'est en faisant en boucle infinie. Si non le script va s'éxécuter qu'une seul fois lors de la  premiere connexion d'un client et les autres clients n'auront plus acces au server.
 
 ````java 
 @Override
@@ -103,7 +104,8 @@ public class Test {
 	}		
 }
 ````
-
+### Créations des sockets pour chaque client
+![Image multithread](Capturejava.jpg)
 On va devoir créer une nouvelle class nommée "Converstaion" qui étendra également de thread. On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifint à noiuveau la méthode run().
 
 ````java
