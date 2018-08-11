@@ -1,4 +1,4 @@
-# Création d'un mini-serveur en java
+# Création d'un mini-chat en java
 
 Alors la première chose, il créer un Projet ``` File -> New -> Java Project  ```. Nommez le "Server"
 
@@ -14,6 +14,25 @@ public class Server {
 	}
 }
 ````
+Il faut qu'on fasse un héritage de la class Thread. En étendant cette class, nous allons devoir redifinir une méthode appellée run(){
+}
+````java
+public class Server extends Thread {
+	public static void main(String[] args) {	
+	    // TODO Auto-generated method stub
+	}
+	
+	@Override
+	public void run() {  // On redifinit la méthode
+				
+	}
+}
+````
+
+En effet un Thread va gérer les autres thread. A chaque fois que quelqu'un se connecteau serveur, il faut créer un nouveau thread. 
+
+
+
 
 ## Création du serveur 
 La méthode main est automatiquement appelée quand l'application (ici le server) est lancée.  
@@ -26,7 +45,7 @@ C'est dans cette méthode que nous allons utilser notre première objet.
 ````java
 public static void main(String[] args) {  
 	// Creation du socket
-	ServerSocket serversocket = new ServerSocket(4900);		
+	new Server().start();	// 
 }
 ````
 
