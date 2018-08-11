@@ -63,7 +63,7 @@ Tout d'abord nous allons créer une variable int pour donner des id's aux client
 ````java 
 	int idClient;
 ````
-Il faut la mettre en **golbal** donc en début de script. ensuite dans la boucle while, on incrémente cet id. 
+Il faut la mettre en **golbal** donc en début de script. Ensuite dans la boucle while, on incrémente cet id à chaque fois que quelqu'un se connecte. 
 
 ````
 while(true) {				
