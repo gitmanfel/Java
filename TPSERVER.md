@@ -95,8 +95,65 @@ public class Test {
 		new ServerMT().start();
 	}		
 }
-
 ````
+
+On va devoir créer une nouvelle class nommée "Converstaion" qui étendra également de thread. On peut soit la créer dans un autre fichier, soit faire en créer une dans la class Server. Et c'est ce que nous allons faire. ET puis que c'est une class étendu, on redifint à noiuveau la méthode run().
+
+````java
+class Conversation extends Thread { 
+	@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			
+		}
+}
+	
+````
+Ce qui devrait donner ceci
+````java 
+
+public class Test {
+
+	int idClient;
+	
+	@Override
+	public void run() {  // On redifinit la méthode
+		try {
+			ServerSocket ss = new ServerSocket(1800);
+			while(true) {				
+				Socket socket = ss.accept();			
+				++idClient;
+				
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+	}
+	
+	class Conversation extends Thread { 		
+		@Override
+		public void run() {
+			
+		}		
+	}
+	
+	public static void main(String[] args) {
+		new ServerMT().start();
+	}
+	
+		
+}
+````
+
+
+
+
+
+
+
+
 
 
 
