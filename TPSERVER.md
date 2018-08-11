@@ -37,7 +37,7 @@ public class Server extends Thread {
 ````
 
 ### Définition de la méthode main
-Dans la méthode ``main`` nous allons utilser notre première objet. On instacie la class server qui va appeller la méthode run ici plus haut.
+Dans la méthode ``main`` nous allons utilser notre première objet. On instancie la class server qui va appeller la méthode run ici plus haut.
 
 ````java
 public static void main(String[] args) {  
