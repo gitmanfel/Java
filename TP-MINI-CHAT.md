@@ -409,7 +409,7 @@ public class Server extends Thread {
 	int idClient;
 	
 	public static void main(String[] args) {
-		new Test().start();
+		new Server().start();
 	}
 	
 	@Override
