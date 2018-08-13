@@ -144,7 +144,7 @@ float j = (float)i; // Le résultat sera 256.0f
 De même que 
 ```java
 float a = 25.90;
-int b = (int)a; // Le résultat sera 26
+int b = (int)a; // Le résultat sera 25
 
 float c = 25.30;
 int d = (int)c; // Le résultat sera 25
